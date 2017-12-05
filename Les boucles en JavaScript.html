@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Les boucles en JavaScript</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Les boucles en JavaScript</h1>
+		<script>
+			//1
+			var x = 0;
+
+			while(x < 10){
+				alert('x contient la valeur :'+ x);
+				x++;
+			}
+
+			//2
+			var x = 0, xprime = 0, alpha = 10, alphaprime = 10;
+
+			var y = x++;
+			var beta = alpha--;
+
+			var yprime = ++xprime;
+			var betaprime = --alphaprime;
+
+			alert('y : ' + y +
+				'\nx : ' + x +
+				'\nbeta : ' + beta +
+				'\nalpha : ' + alpha +
+				'\nyprime : ' + yprime +
+				'\nxprime : ' + xprime +
+				'\nbetaprime : ' + betaprime +
+				'\nalphaprime : ' + alphaprime);
+
+			//3
+			var i = "";
+
+			for(i= 0; i < 10; i++){
+				alert('i contient la valeur : ' + i);
+			}
+
+		</script>
+	</body>
+</html>

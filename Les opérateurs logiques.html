@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Les opérateurs logiques en JavaScript</title>
+			<meta charset="utf-8">
+		</head>
+		<body>
+			<h1>Les opérateurs logiques en JavaScript</h1>
+			<p>(&&)= et en JS
+			(||)= ou en JS
+			(|)= non en JS</p>
+			<script>
+				//1
+				var heure = 9;
+				if (heure >= 0 && heure < 12 == true){
+					alert ("c'est le matin");
+				}
+				else if (heure === 12 == true) {
+					alert ("C'est l'après midi ou le soir");
+				}
+				else {
+					alert ("La valeur entrée ne semble pas valide");
+				}
+				//2
+				var heure = 26;
+
+				if (heure < 0 || heure > 24 ==true) {
+					alert("L'heure est invalide");
+				}
+				else {
+					alert("L'heure semble valide");
+				}
+				//3
+				var heure = 18;
+
+				if (!(heure <= 16) == true) {
+					alert("Il est plus de 16h");
+				}
+				else{
+					alert("Il est moins de 16h");
+				}
+			</script>
+		</body>
+</html>

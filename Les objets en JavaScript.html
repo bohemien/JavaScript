@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Les objets en JavaScript</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Les objets en JavaScript</h1>
+		<script>
+			//1
+			var primitive = "Je suis une valeur primitive";
+			var type_prim = typeof (primitive);
+
+			var chaine = new String ("Je suis un objet");
+			var type_chai = typeof (chaine);
+
+			alert ("type de primitive : " + type_prim +
+				'\nType de chaine : ' + type_chai);
+
+			//2
+			var primitive = "Je suis une valeur primitive";
+			var longueur_prim = primitive.length;
+			var maj_prim = primitive.toUpperCase();
+
+			var chaine = new String ("Je suis un objet");
+			var maj_chai = chaine.toUpperCase();
+
+			alert ('Longueur de primitive : ' + longueur_prim +
+				'\nPrimitive en majuscules: ' + maj_prim +
+				'\nChaine en majuscules : ' + maj_chai);
+
+			//3
+			var moi = {
+				prenom: "aurel",
+				nom: "Lebbé",
+				age: 36,
+
+				id: function(){
+					return this.prenom + ' ' + this.nom;
+				}
+			};
+
+			alert (moi.id());
+
+			//4
+			//constructeur
+			function Identite(p, n, a){
+				this.prenom = p;
+				this.nom = n;
+				this.age = a;
+			}
+
+			var aurel = new Identite ("Aurel", "Lebbé", 36);
+			var pierre = new Identite ("Pierre", "Giraud", 25);
+			var victor = new Identite ("Victor", "Durand", 24);
+
+			alert ('Age de Pierre : ' + pierre.age +
+				'\nAge de Victor : ' + victor.age +
+				"\nAge d'Aurel : " + aurel.age);
+
+			//5
+			var x = 10;
+			var y = x;
+			y += 10;
+
+			alert('Valeur de x : ' + x +
+				'\nValeur de y : ' + y);
+
+			//6
+			//constructeur
+			function Identite(p, n, a){
+				this.prenom = p;
+				this.nom = n;
+				this.age = a;
+			}
+
+			var pierre = new Identite ("Pierre", "Giraud", 25);
+			var victor = pierre;
+
+			victor.prenom = "ghghjhbnb";
+
+			alert ('Prénom de Pierre : ' + pierre.prenom + 
+				'\nPrénom de Victor : ' + victor.prenom);
+
+			//7
+			var texte = "J'apprends le JAVASCRIPT";
+
+			var texteMin = texte.toLowerCase();
+			var texteMaj = texte.toUpperCase();
+
+			alert ('Texte de base : ' + texte +
+				'\nTexte en minuscules : ' + texteMin +
+				'\nTexte en majuscules : ' + texteMaj);
+
+			//8
+			var texte = "J'apprends le JAVASCRIPT";
+
+			var pos0 = texte.charAt(0);
+			var pos3 = texte.charAt(3);
+			var pos11= texte.charAt(11);
+
+			alert ('Position 0 : ' + pos0 +
+			'\nPosition 3 : ' + pos3 +
+			'\nPosition 11 : ' + pos11);
+
+			//9
+			var texte = "J'apprends le JAVASCRIPT";
+
+			var premiere = texte.indexOf('p');
+			var derniere = texte.lastIndexOf('p');
+			var sequence = texte.indexOf('le');
+
+			alert('Premier "p" trouvé en position : ' + premiere +
+				'\nDernier "p" trouvé en position ' + derniere + 
+				'\nPremier "le" trouvé en position : ' + sequence);
+			//attention sensible à la casse
+
+			//10
+			var texte = "J'apprends le JAVASCRIPT";
+
+			alert(texte.replace("JAVASCRIPT", "PHP"));
+
+			//11
+			var texte = "J'apprends le JAVASCRIPT";
+
+			var texteTronque = texte.slice(0, 10);
+
+			alert(texte.slice(0, 10));
+
+			//12
+			var texte = "J'apprends le JAVASCRIPT ";
+
+			var texteTronque = texte.slice(-11, -1);
+			alert(texteTronque);
+
+			//13
+			var texte = "                                           J'apprends le JAVASCRIPT                             ";
+
+			var texteNettoye = texte.trim();
+			alert('Avant trim : ' + texte + 
+				'\nApres trim : ' + texteNettoye);
+
+		</script>
+	</body>
+</html>

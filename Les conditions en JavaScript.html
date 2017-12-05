@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Les conditions en JavaScript</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Les conditions en JavaScript</h1>
+		<p>== est égal à (en valeur)
+		!= est différent de (en valeur)
+		===est égal à (en valeur et en type)
+		!== est différent de (en valeur et en type)
+		< est strictement inférieur à
+		<= inferieur ou égal à
+		> est strictement supérieur à
+		>= est supérieur où égal à
+		<p>
+		<script>
+			//1
+			var heure = 15;
+			if (heure<= 18 == true){
+				alert("Bonjour");
+			}
+
+			//2
+			var heure = 21;
+			if (heure <= 18 == false){
+				alert("Bonsoir");
+			}
+
+			//3
+			var heure = 21;
+			if (heure <= 18 == true){
+				alert("Bonjour");
+			}
+			else{
+				alert ("Bonsoir");
+			}
+
+			//4
+			var heure = 8;
+
+			if (heure < 12 == true){
+				alert ("C'est le matin");
+			} 
+			else if (heure == 12 == true) {
+				alert ("Il est midi");
+			}
+			else if (heure <= 18 == true) {
+				alert ("C'est l'après midi");
+			}
+			else {
+				alert ("C'est le soir");
+			}
+			
+		</script>
+	</body>
+</html>
