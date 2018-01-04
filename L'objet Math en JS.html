@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>L'objet Math en JS</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>L'objet Math en JS</h1>
+		<script>
+			//1
+			var x = Math.random()*1000;
+			var y = Math.random()*1000;
+
+			alert('Contenu de x : ' + x +
+				'\nContenu de y : ' + y);
+
+			//2
+			var x = Math.random()*1000;
+			var y = Math.round(x);
+
+			alert('Contenu de x : ' + x +
+				'\nContenu arrondi de x : ' + y);
+
+			//3
+			var x = Math.random()*1000;
+			var inf = Math.floor(x);
+			var sup = Math.ceil(x);
+
+			alert('Contenu de x : ' + x +
+				'\nArrondi inférieur de x : ' + inf +
+				'\nArrondi supérieur de x : ' + sup);
+
+			//4
+			var min = Math.min(0, -10, 200, 75, 25);
+			var max = Math.max(0, -10, 200, 75, 25);
+
+			alert('Plus petit nombre: ' + min +
+				'\nPlus grand nombre : ' + max);
+
+			//5
+			var x = 2;
+			var y = -10;
+
+			var absx = Math.abs(x);
+			var absy = Math.abs(y);
+
+			alert('Valeur de x : ' + x + '\nValeur absolue de x :' + absx +
+				'\nValeur de y : ' + y + '\nValeur absolue de y :' + absy);
+
+			//6
+			var x = 5, y = 3, z = 0.5;
+
+			var power = Math.pow(x,y);
+			var rac = Math.sqrt(x);
+			var cos = Math.cos(z);
+			var sin = Math.sin(z);
+			var pi = Math.PI;
+
+			alert("Résultat de pow() : "+ power +
+				'\nRacine de 5 : ' + rac +
+				'\nCosinus de 0,5 : ' + cos +
+				'\nSinus de 0,5 : ' + sin +
+				'\nApproximation de PI : ' + pi);
+
+		</script>
+	</body>
+</html>
