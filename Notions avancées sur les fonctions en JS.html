@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Notions avancées sur les fonctions en JS</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Notions avancées sur les fonctions en JS</h1>
+		<script>
+			//1
+			/*
+			function locale(){
+				var x = 5;
+				alert(x);
+			}
+
+			locale();
+
+			*/
+			//2
+			/*
+			var x = 4;
+			function locale(){
+				alert(x)
+			}
+
+			locale();
+			alert(x);
+
+			*/
+			//3
+			var x = 4;
+			function locale(){
+				var x = 7;
+				return x;
+			}
+
+			alert('x globale: ' + x +
+			'\nx local : ' + locale());
+
+			// éviter les variables globales et privilègier les valeurs locales
+
+		</script>
+	</body>
+</html>

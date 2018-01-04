@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Les fonctions auto-invoquées en JS</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Les fonctions auto-invoquées en JS</h1>
+		<script>
+			(function(x){
+				x = prompt("Entrez un nombre");
+				alert("Carré de " + x + ' = ' + x*x);
+			})();
+		</script>
+	</body>
+</html>
