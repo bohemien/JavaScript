@@ -7,7 +7,6 @@
 	<body>
 		<h1>L'objet Date dans JS</h1>
 		<script>
-/*
 			//1
 			var datelit = Date();
 			var datems = Date.now();
@@ -83,12 +82,12 @@
 			d.setSeconds(12);
 
 			alert('Date définie : ' + d)
-*/
+	
 			//10
 			var d = new Date();
 
 			var dy = d.getFullYear();
-			var dmo = d.getMonth() +1;
+			var dmo = d.getMonth();
 			var dday = d.getDay();
 			var dh = d.getHours();
 			var dmi = d.getMinutes();
@@ -98,8 +97,7 @@
 
 			var jour = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
 
-			alert('Le ' + jour[dday] + ' ' + ddate + ' ' + mois[dmo] + ' ' + dy + 
-					'.\nIl est : '+ dh + 'h' + dmi + 'mn et'+ ds + 's.');
+			alert('Le ' + jour[dday] + ' ' + ddate + ' ' + mois[dmo] + ' ' + dy + '.\nIl est : '+ dh + 'h' + dmi + 'mn et'+ ds + ' s.') ;
 
 		</script>
 	</body>
