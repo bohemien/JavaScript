@@ -140,6 +140,68 @@
 			alert('Avant trim : ' + texte + 
 				'\nApres trim : ' + texteNettoye);
 
+			//14
+			var min = Number.MIN_VALUE;
+			var max = Number.MAX_VALUE;
+			var infneg = Number.NEGATIVE_INFINITY;
+			var infpos = Number.POSITIVE_INFINITY;
+			var notnumber = Number.NaN;
+
+			alert('Min : ' + min +
+				'\nMax : ' + max +
+				'\nInfini négatif : ' + infneg +
+				'\nInfini positif : ' + infpos +
+				'\nPas un nombre : ' + notnumber);
+
+			//15
+			var x = 10;
+
+			var t = x.toString();
+
+			alert('Type x : ' + typeof(x)+
+				'\nType t : ' + typeof(t));
+
+			//16
+			var x = 10.4531;
+
+			var d = x.toFixed(2);
+
+			alert('Valeur de d : ' + d +
+				'\nType de d : ' + typeof(d));
+
+			//17
+			var x = 10.4531;
+
+			var d = x.toPrecision(3);
+
+			alert('Valeur de d : ' + d +
+				'\nType de d : ' + typeof(d));
+
+			//18
+			var x = 10.4531;
+
+			var d = x.toExponential(2);
+
+			alert('Valeur de d : ' + d +
+				'\nType de d : ' + typeof(d));
+
+			//19
+			var t = true;
+			var f = false;
+			var d = new Date();
+
+			alert('True : ' + Number(t) +
+				'\nFalse : ' + Number(f) +
+				'\nDate : ' + Number(d));
+
+			//20
+			var x = "10.4531";
+
+			var int = parseInt(x);
+			var dec = parseFloat(x);
+
+			alert('parseInt() : ' + int + ' - ' + typeof(int) +
+				'\nparseFloat() : ' + dec + ' - ' + typeof(dec));
 		</script>
 	</body>
 </html>

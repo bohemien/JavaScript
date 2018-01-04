@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>L'objet Date dans JS</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>L'objet Date dans JS</h1>
+		<script>
+/*
+			//1
+			var datelit = Date();
+			var datems = Date.now();
+
+			alert('Date littérale : ' + datelit + 
+				'\nDate sous forme de ms : ' + datems);
+
+			//2
+			var d = new Date();
+
+			alert(d);
+
+			//3
+			var d = new Date("January 25, 2015 09:09:00");
+
+			alert(d);
+
+			//4
+			var d = new Date (0);
+
+			alert(d);
+
+			//5
+			var d = new Date (604800000);
+
+			alert(d);
+
+			//6
+			var d1 = new Date(2017,11,25,02,18,111);
+			var d2 = new Date(2017,11,25);
+
+			alert('Date 1 : ' + d1 
+				+'\nDate 2 : ' + d2);
+
+			//7
+			var diso1 = new Date("2017-12-15");
+			var diso2 = new Date("2017-12-15T03:00:00");
+
+			var dcourte = new Date("12/15/2017");
+			var dlongue = new Date("December 15 2017 09:00:00");
+
+			var dcomp = new Date("fri Dec 15 2017 09:00:00 GMT+0100");
+
+			alert('Date ISO courte : ' + diso1 +
+				"\nDate ISO complète : " + diso2 +
+				"\nDate courte : " + dcourte +
+				"\nDate longue : " + dlongue +
+				"\nDate complète : " + dcomp);
+
+			//8
+			var d = new Date();
+
+			var dms = d.getTime();
+			var dy = d.getFullYear();
+			var dmo = d.getMonth() +1;
+			var ddate = d.getDate();
+			var dday = d.getDate();
+
+			var dh = d.getHours();
+			var dmi = d.getMinutes();
+			var ds = d.getSeconds();
+			var dMs = d.getMilliseconds();
+
+			alert('Nous sommes le ' + ddate +'/' + dmo +'/' + dy + 
+				'.\nIl est actuellement ' + dh +':'+ dmi +':'+ ds +':'+ dMs);
+
+			//9
+			var d = new Date();
+
+			d.setFullYear(2017,11,26);
+			d.setHours(12);
+			d.setMinutes(20);
+			d.setSeconds(12);
+
+			alert('Date définie : ' + d)
+*/
+			//10
+			var d = new Date();
+
+			var dy = d.getFullYear();
+			var dmo = d.getMonth() +1;
+			var dday = d.getDay();
+			var dh = d.getHours();
+			var dmi = d.getMinutes();
+			var ds = d.getSeconds();
+
+			var mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+
+			var jour = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+
+			alert('Le ' + jour[dday] + ' ' + ddate + ' ' + mois[dmo] + ' ' + dy + 
+					'.\nIl est : '+ dh + 'h' + dmi + 'mn et'+ ds + 's.');
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Les tableaux en JS</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>Les tableaux en JS</h1>
+		<script>
+			//1
+			var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'];
+
+			prenoms[0] = 'Paul';
+
+			alert(prenoms[0]);
+
+			//2
+			var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'];
+
+			alert('Notre tableau contient ' + prenoms.length + ' éléments');
+
+			//3
+			var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'];
+
+			prenoms[prenoms.length] = 'Florian';
+			prenoms[prenoms.length] = 'Chloé';
+
+			alert('On a ajouté ' +prenoms[4]+ ' et ' +prenoms[5]+' à notre tableau ' );
+
+			//4
+			var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'], p = '';
+
+			for(var i=0; i < prenoms.length; i++){
+				p+= 'Prénom n°'+ (i+1) +' : ' + prenoms[i] + '\n';
+			}
+
+			alert (p);
+
+			//5 objets litéraux pas un tableau
+			var prenoms = {
+				prenom1 : 'Pierre',
+				prenom2 : 'Victor',
+				prenom3 : 'Julia',
+				prenom4 : 'Claire',
+			} ;
+
+			alert(prenoms.prenom1);
+
+			//6 objets litéraux pas un tableau
+			var prenoms = {
+				prenom1 : 'Pierre',
+				prenom2 : 'Victor',
+				prenom3 : 'Julia',
+				prenom4 : 'Claire',
+			}, p = '';
+
+			for(var clefs in prenoms){
+				p+= clefs + ' : ' + prenoms[clefs] + '\n'
+			}
+
+			alert(p);
+
+			//7
+			var prenoms = ['Pierre', 'Victor', 'Julia', 'Claire'], p='';
+
+			var garcons = prenoms.slice(0,2);
+
+			for(var i=0; i < prenoms.length; i++){
+				p+= 'Prénom n° ' + (i+1) + ' : ' + prenoms[i] + '\n';
+			}
+
+			alert('Notre tableau de base : ' + prenoms + 
+				'\nLe tableau crée par slice() : ' + garcons);
+
+			//8
+			var garcons = ['Pierre', 'Victor'];
+			var filles = ['Julia', 'Claire'];
+
+			var gf = garcons.concat(filles);
+			var fg = filles.concat(garcons);
+
+			alert('Valeurs du tableau garcons : ' + garcons +
+				'\nValeurs du tableau filles : ' + filles +
+				'\nValeurs du tableau gf : ' + gf +
+				'\nValeurs du tableau fg : ' + fg);
+
+			//9
+			var garcons = ['Pierre', 'Victor'];
+			var filles = ['Julia', 'Claire'];
+			var animaux = ['Bubulle', 'Minou'];
+
+			var fusion = garcons.concat(filles, animaux);
+
+			alert('fusion : \n' + fusion);
+
+
+		</script>
+
+	</body>
+</html>
