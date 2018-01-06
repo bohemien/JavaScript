@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Le Dom html Naviguer dans le DOM en JS</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1 id="gros_titre">Le DOM</h1>
+
+		<div>
+			<p class='para'>Du texte</p>
+			<p class='para'>Un deuxième <strong>paragraphe</strong></p>
+		</div>
+		
+		<script>
+			//1
+			/*
+			var p = document.querySelector('.para');
+			var div = p.parentNode;
+
+			div.style.color ='orange';
+			
+			//2
+			var b = document.body;
+
+			var div = b.childNodes[3];
+
+			var p1 = div.childNodes[1];
+
+			var texte = p1.childNodes[0].nodeValue;
+
+			alert(texte);
+			
+			//3
+			var p2 = document.querySelectorAll('.para')[1];
+
+			var premier = p2.firstChild;
+			var dernier = p2.lastChild;
+
+			var inner1 = premier.nodeValue;
+			var inner2 = dernier.innerHTML;
+
+			alert('Contenu du premier enfant : ' + inner1 + 
+				'\nContenu du dernier enfant : ' + inner2);
+			*/
+			//4
+			var titre = document.getElementById('gros_titre');
+
+			var div = titre.nextSibling.nextSibling;
+
+			div.innerHTML = '<p>div totalement modifié</p>';
+
+
+
+		</script>
+	</body>
+</html> 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Le Dom html modifier ou supprimer du contenu HTML en JS</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1 id="gros_titre">Découverte du DOM HTML en JS</h1>
+		<p class ='para'>Du texte et <a href="http://pierre-giraud.com">un lien</a></p>
+		<p class='para'>Un deuxieme paragraphe</p>
+		<p>Un troisième paragraphe</p>
+
+		<script>
+			//1
+			/*
+			var titre = document.getElementById('gros_titre');
+			var parent = document.body;
+
+			parent.removeChild(titre);
+			*/
+			//2
+			var titre = document.getElementById('gros_titre');
+			var parent = document.body;
+
+			var nouveauTitre = document.createElement('h2');
+			nouveauTitre.id = 'titre_moyen';
+			nouveauTitre.innerHTML = 'Titre modifié en JS';
+
+			parent.replaceChild(nouveauTitre, titre);
+
+		</script>
+	</body>
+</html> 
